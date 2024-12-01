@@ -1,8 +1,8 @@
 import Home from './features/home/Home';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
-import PageWrapper from './components/pageWrapper/PageWrapper';
 import { GlobalStyle } from './styles/global';
+import { PageWrapper } from './components';
 
 function App() {
 	return (

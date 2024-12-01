@@ -5,7 +5,9 @@ const Home = () => {
 	return (
 		<HeroWrapper>
 			<h1>Hi! I'm Simon :)</h1>
-			<p>Fullstack Developer | Problem Solver | Team Player</p>
+			<p>
+				Fullstack Developer | Problem Solver | Bug hunter | Team Player
+			</p>
 			<HeroButton>View My Work</HeroButton>
 		</HeroWrapper>
 	);

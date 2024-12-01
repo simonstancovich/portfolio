@@ -5,8 +5,6 @@ interface PageWrapperProps {
 	children: React.ReactNode;
 }
 
-const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
+export const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
 	return <Wrapper>{children}</Wrapper>;
 };
-
-export default PageWrapper;
