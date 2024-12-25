@@ -5,14 +5,24 @@ export const DesktopNavBarWrapper = styled.nav`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	padding-top: 10px;
 `;
 
 export const DesktopNavBarContainer = styled.div`
 	display: flex;
+	position: relative;
 	max-width: fit-content;
 	border-radius: ${({ theme }) => theme.borderRadius.xLarge};
 	background: ${({ theme }) => theme.colors.navBarTranslucent};
 	backdrop-filter: blur(17.5px);
+`;
+
+export const Slider = styled.div`
+	position: absolute;
+	height: 100%;
+	background-color: ${({ theme }) => theme.colors.active};
+	border-radius: ${({ theme }) => theme.borderRadius.xLarge};
+	transition: left 0.3s ease, width 0.3s ease;
 `;
 
 export const DesktopNavBarItem = styled(NavLink)`
@@ -20,11 +30,10 @@ export const DesktopNavBarItem = styled(NavLink)`
 	color: ${({ theme }) => theme.colors.text};
 	padding: ${({ theme }) => theme.spacing.xsSmall}
 		${({ theme }) => theme.spacing.small};
-	border-radius: ${({ theme }) => theme.borderRadius.large};
+	border-radius: ${({ theme }) => theme.borderRadius.xLarge};
 	transition: ${({ theme }) => theme.transitions.default};
 
 	&.active {
-		background-color: ${({ theme }) => theme.colors.active};
 		color: ${({ theme }) => theme.colors.lightText};
 	}
 
@@ -35,7 +44,6 @@ export const DesktopNavBarItem = styled(NavLink)`
 	}
 
 	&:active {
-		background-color: ${({ theme }) => theme.colors.teal};
 		transform: ${({ theme }) => theme.scale.xsFull};
 	}
 	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

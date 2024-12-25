@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -9,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    padding: ${({ theme }) => theme.spacing.small};
+    // padding: ${({ theme }) => theme.spacing.small};
     height: 100%;
     width: 100%;
     background: ${({ theme }) => theme.gradients.main};
@@ -89,4 +90,15 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700; 
     font-style: normal;
   }
+`;
+
+export const ContentWrapper = styled.div`
+	max-width: ${({ theme }) => theme.sizes.maxWidth};
+	margin: 0 auto;
+	padding: ${({ theme }) => theme.spacing.medium};
+	background-color: transparent; /* Keep it transparent to let the body gradient show */
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: ${({ theme }) => theme.spacing.small};
 `;

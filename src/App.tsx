@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
-import { GlobalStyle } from './styles/global';
+import { ContentWrapper, GlobalStyle } from './styles/global';
 import { images } from './assets/images';
 import { NavBar } from './features/navBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -16,12 +16,14 @@ function App() {
 			<GlobalStyle />
 			<Router>
 				<NavBar />
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/experience' element={<Experience />} />
-					<Route path='/portfolio' element={<Portfolio />} />
-					<Route path='/contact' element={<Contact />} />
-				</Routes>
+				<ContentWrapper>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/experience' element={<Experience />} />
+						<Route path='/portfolio' element={<Portfolio />} />
+						<Route path='/contact' element={<Contact />} />
+					</Routes>
+				</ContentWrapper>
 			</Router>
 			<img src={images.tattoo} alt='Example' width={200} />
 		</ThemeProvider>
