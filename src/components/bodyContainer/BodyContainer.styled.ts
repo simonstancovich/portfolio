@@ -8,7 +8,9 @@ export const Container = styled.div`
 	background-color: ${({ theme }) => theme.colors.background};
 	border-radius: ${({ theme }) => theme.borderRadius.large};
 	box-shadow: ${({ theme }) => theme.shadows.large};
+
+	/* Allow flexibility for child layouts */
 	display: flex;
 	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing.medium};
+	gap: ${({ theme }) => theme.spacing.large};
 `;

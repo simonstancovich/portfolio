@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
+    padding: ${({ theme }) => theme.spacing.small};
     height: 100%;
     width: 100%;
     background: ${({ theme }) => theme.gradients.main};
@@ -19,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.6;
-    padding: 0 ${({ theme }) => theme.spacing.medium};
+    // padding: 0 ${({ theme }) => theme.spacing.medium};
     font-size: ${({ theme }) => theme.sizes.fontSize};
   }
 
@@ -73,5 +74,19 @@ export const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: ${({ theme }) => theme.sizes.smallFont};
     margin-bottom: ${({ theme }) => theme.spacing.small};
+  }
+
+    @font-face {
+    font-family: 'Raleway';
+    src: url('/assets/fonts/raleway/Raleway-Regular.ttf') format('truetype');
+    font-weight: 400; 
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+    src: url('/assets/fonts/Raleway-Italic.ttf') format('truetype');
+    font-weight: 700; 
+    font-style: normal;
   }
 `;
