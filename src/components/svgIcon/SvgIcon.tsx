@@ -3,19 +3,17 @@ import { StyledSvgWrapper } from './SvgIcon.styled';
 
 interface SvgIconProps {
 	src: string;
-	width?: string;
-	height?: string;
-	color?: string;
-	alt?: string;
+	width?: string | number;
+	height?: string | number;
+	color?: 'primary' | 'accent' | 'white';
 	className?: string;
 }
 
 export const SvgIcon: React.FC<SvgIconProps> = ({
 	src,
-	width,
-	height,
-	color,
-	alt = '',
+	width = 24,
+	height = 24,
+	color = 'accent',
 	className,
 }) => {
 	return (
@@ -24,7 +22,6 @@ export const SvgIcon: React.FC<SvgIconProps> = ({
 			width={width}
 			height={height}
 			color={color}
-			alt={alt}
 			className={className}
 		/>
 	);

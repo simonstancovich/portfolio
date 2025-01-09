@@ -13,14 +13,12 @@ const slideIn = keyframes`
 export const MobileMenuWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	// gap: ${({ theme }) => theme.spacing.small};
-	// padding: ${({ theme }) => theme.spacing.small};
-	background-color: ${({ theme }) => theme.colors.lightGray};
+	background-color: ${({ theme }) => theme.colors.navBar.lightGray};
 	position: absolute;
 	top: 70px;
 	left: 10px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	border-radius: ${({ theme }) => theme.borderRadius.medium};
+	border-radius: ${({ theme }) => theme.borderRadius.md};
 	z-index: 1000;
 	animation: ${slideIn} 0.3s ease-out;
 
@@ -31,20 +29,20 @@ export const MobileMenuWrapper = styled.div`
 
 export const MobileMenuItem = styled(NavLink)`
 	text-decoration: none;
-	color: ${({ theme }) => theme.colors.text};
-	padding: ${({ theme }) => theme.spacing.small}
-		${({ theme }) => theme.spacing.xsMedium};
-	border-radius: ${({ theme }) => theme.borderRadius.small};
+	color: ${({ theme }) => theme.colors.font.accent};
+	padding: ${({ theme }) => theme.spacing.xs}
+		${({ theme }) => theme.spacing.sm};
+	border-radius: ${({ theme }) => theme.borderRadius.xs};
 	transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 
 	&.active {
-		background-color: ${({ theme }) => theme.colors.active};
-		color: ${({ theme }) => theme.colors.lightText};
+		background-color: ${({ theme }) => theme.colors.navBar.active};
+		color: ${({ theme }) => theme.colors.font.white};
 	}
 
 	&:hover {
 		background-color: ${({ theme }) => theme.colors.primaryLight};
-		color: ${({ theme }) => theme.colors.lightText};
+		color: ${({ theme }) => theme.colors.font.white};
 	}
 
 	&:active {

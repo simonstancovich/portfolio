@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import { toPx } from '../../utils/toPx';
 
 interface StyledSvgWrapperProps {
-	width?: string;
-	height?: string;
-	color?: string;
+	width?: string | number;
+	height?: string | number;
+	color?: 'primary' | 'accent' | 'white';
 }
 
 export const StyledSvgWrapper = styled.img<StyledSvgWrapperProps>`
-	width: ${({ width }) => width || '24px'};
-	height: ${({ height }) => height || '24px'};
+	width: ${({ width }) => toPx(width)};
+	height: ${({ height }) => toPx(height, '100%')};
 	display: inline-block;
 	object-fit: contain;
 

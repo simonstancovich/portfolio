@@ -1,40 +1,59 @@
-export const theme = {
+import { DefaultTheme } from 'styled-components';
+
+export const theme: DefaultTheme = {
 	colors: {
-		primary: 'hsla(266, 8%, 16%, 0.549)', // Cactus Green
-		navBarTranslucent: 'rgba(33, 31, 35, 0.35)',
-		accent: 'hsla(180, 84%, 45%, 0.174)', // Lime Green
-		background: '#D5E8D4', // Baby Green
-		active: '#06949464',
-		text: '#069494', // Dark text
-		lightText: '#FFFFFF', // Light text
-		hover: '#F4A261', // Orange for hover
-		border: '#A3CB38', // Border color
-		purple: '#9079c4',
-		teal: '#149c9c',
-		lightGray: 'hsla(260, 7%, 16%, 1)',
+		primary: 'rgba(40, 38, 44, 0.549)',
+		accent: 'rgb(30, 224, 199)', // Lime Green
+		white: 'rgb(255, 255, 255)',
+		navBar: {
+			background: 'rgba(33, 31, 35, 0.35)',
+			active: 'rgba(6, 148, 148, 0.286)',
+		},
+		font: {
+			accent: '#069494',
+			teal: 'rgb(21, 158, 158)',
+			white: 'rgb(255, 255, 255)',
+			gray: 'rgba(40, 38, 44, 1)',
+			lightGray: 'rgb(139, 138, 138)',
+		},
+		border: {
+			main: 'rgb(163, 203, 56)',
+		},
 	},
 	gradients: {
-		main: 'linear-gradient(180deg, #1d161e 0%, #000000 100%)',
-		hover: 'linear-gradient(180deg, #a3cb38 0%, #f4a261 100%)',
+		main: 'linear-gradient(180deg, rgb(29, 22, 30) 0%, rgb(0, 0, 0) 100%)',
+		hover: 'linear-gradient(180deg, rgb(163, 203, 56) 0%, rgb(244, 162, 97) 100%)',
+		background:
+			'linear-gradient(135deg, rgb(30, 224, 199) 0%, rgb(141, 63, 255) 100%)',
 	},
 	fonts: {
 		primary: "'Raleway', sans-serif",
+		secondary: "'Inter', sans-serif",
+		p: "'Roboto', sans-serif",
 	},
 	fontWeight: {
+		normal: '400',
+		medium: '500',
 		bold: '600',
 	},
 	sizes: {
-		fontSize: '16px',
-		smallFont: '14px',
-		largeFont: '20px',
+		font: {
+			xs: '12px',
+			sm: '14px',
+			md: '16px',
+			lg: '20px',
+			xl: '24px',
+			xxl: '28px',
+			dxxl: '56px',
+		},
 		maxWidth: '1200px',
 		headerHeight: '80px',
 	},
 	borderRadius: {
-		small: '4px',
-		medium: '8px',
-		large: '12px',
-		xLarge: '20px',
+		xs: '4px',
+		md: '8px',
+		xl: '12px',
+		xxl: '20px',
 		full: '50%',
 	},
 	borderWidth: {
@@ -46,16 +65,18 @@ export const theme = {
 		dashed: 'dashed',
 	},
 	spacing: {
-		xsSmall: '8px',
-		small: '16px',
-		xsMedium: '24px',
-		medium: '32px',
-		large: '64px',
-		xLarge: '96px',
+		xxxs: '4',
+		xxs: '8px',
+		xs: '16px',
+		sm: '24px',
+		md: '32px',
+		lg: '48px',
+		xl: '64px',
+		xxl: '96px',
 	},
 	shadows: {
-		small: '0 2px 4px rgba(0, 0, 0, 0.1)',
-		large: '0 4px 8px rgba(0, 0, 0, 0.2)',
+		xs: '0 2px 4px rgba(0, 0, 0, 0.1)',
+		xl: '0 4px 8px rgba(0, 0, 0, 0.2)',
 	},
 	transitions: {
 		default: 'all 0.3s ease',

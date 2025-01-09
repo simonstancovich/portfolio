@@ -8,14 +8,16 @@ export const HamburgerContainer = styled.div.withConfig({
 	position: relative;
 	width: 30px;
 	height: 24px;
+	margin-left: ${({ theme }) => theme.spacing.xs};
+	margin-top: ${({ theme }) => theme.spacing.xs};
 
 	span {
 		display: block;
 		position: absolute;
 		width: 100%;
 		height: 3px;
-		background-color: ${({ theme }) => theme.colors.text};
-		border-radius: ${({ theme }) => theme.borderRadius.small};
+		background-color: ${({ theme }) => theme.colors.font.accent};
+		border-radius: ${({ theme }) => theme.borderRadius.xs};
 		transition: ${({ theme }) => theme.transitions.default};
 
 		&:nth-child(1) {

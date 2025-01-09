@@ -1,23 +1,27 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+type FlexAlign = 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
+
+type FlexJustify =
+	| 'flex-start'
+	| 'flex-end'
+	| 'center'
+	| 'space-between'
+	| 'space-around'
+	| 'space-evenly';
+
+interface ContainerProps {
+	alignItems?: FlexAlign;
+	justifyContent?: FlexJustify;
+	width?: string;
+}
+
+export const Container = styled.div<ContainerProps>`
 	display: flex;
+	width: ${({ width }) => width};
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: ${({ theme }) => theme.spacing.large};
-	background: ${({ theme }) => theme.gradients.main};
-	border-radius: ${({ theme }) => theme.borderRadius.medium};
-	box-shadow: ${({ theme }) => theme.shadows.small};
+	align-items: ${({ alignItems }) => alignItems};
+	justify-content: ${({ justifyContent }) => justifyContent};
+	border-radius: ${({ theme }) => theme.borderRadius.md};
 	transition: ${({ theme }) => theme.transitions.default};
-
-	& > *:not(:last-child) {
-		margin-bottom: ${({ theme }) => theme.spacing.medium};
-	}
-
-	&:hover {
-		background: ${({ theme }) => theme.gradients.hover};
-		box-shadow: ${({ theme }) => theme.shadows.large};
-		transform: translateY(-4px);
-	}
 `;

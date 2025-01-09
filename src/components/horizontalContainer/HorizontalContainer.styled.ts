@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+	align?: string;
+	justify?: string;
+}
+
+export const Container = styled.div<ContainerProps>`
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: ${({ theme }) => theme.spacing.medium};
-	background: ${({ theme }) => theme.gradients.main};
-	border-radius: ${({ theme }) => theme.borderRadius.medium};
-	box-shadow: ${({ theme }) => theme.shadows.small};
-	gap: ${({ theme }) => theme.spacing.small};
-
-	& > * {
-		margin: 0;
-	}
+	align-items: ${({ align }) => align};
+	justify-content: ${({ justify }) => justify};
+	border-radius: ${({ theme }) => theme.borderRadius.md};
+	gap: ${({ theme }) => theme.spacing.xs};
 `;

@@ -12,34 +12,35 @@ export const DesktopNavBarContainer = styled.div`
 	display: flex;
 	position: relative;
 	max-width: fit-content;
-	border-radius: ${({ theme }) => theme.borderRadius.xLarge};
-	background: ${({ theme }) => theme.colors.navBarTranslucent};
+	border-radius: ${({ theme }) => theme.borderRadius.xxl};
+	background: ${({ theme }) => theme.colors.navBar.background};
 	backdrop-filter: blur(17.5px);
 `;
 
 export const Slider = styled.div`
 	position: absolute;
 	height: 100%;
-	background-color: ${({ theme }) => theme.colors.active};
-	border-radius: ${({ theme }) => theme.borderRadius.xLarge};
+	background-color: ${({ theme }) => theme.colors.navBar.active};
+	border-radius: ${({ theme }) => theme.borderRadius.xxl};
 	transition: left 0.3s ease, width 0.3s ease;
 `;
 
 export const DesktopNavBarItem = styled(NavLink)`
 	text-decoration: none;
-	color: ${({ theme }) => theme.colors.text};
-	padding: ${({ theme }) => theme.spacing.xsSmall}
-		${({ theme }) => theme.spacing.small};
-	border-radius: ${({ theme }) => theme.borderRadius.xLarge};
+	color: ${({ theme }) => theme.colors.accent};
+	padding: ${({ theme }) => theme.spacing.xxs}
+		${({ theme }) => theme.spacing.xs};
+	border-radius: ${({ theme }) => theme.borderRadius.xxl};
 	transition: ${({ theme }) => theme.transitions.default};
 
 	&.active {
-		color: ${({ theme }) => theme.colors.lightText};
+		background-color: ${({ theme }) => theme.colors.primaryLight};
+		color: ${({ theme }) => theme.colors.font.white};
 	}
 
 	&:hover:not(.active) {
 		background-color: ${({ theme }) => theme.colors.primaryLight};
-		color: ${({ theme }) => theme.colors.lightText};
+		color: ${({ theme }) => theme.colors.font.white};
 		transform: ${({ theme }) => theme.scale.xsFull};
 	}
 

@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    // padding: ${({ theme }) => theme.spacing.small};
     height: 100%;
     width: 100%;
     background: ${({ theme }) => theme.gradients.main};
@@ -18,21 +17,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.font.accent};
     line-height: 1.6;
-    // padding: 0 ${({ theme }) => theme.spacing.medium};
-    font-size: ${({ theme }) => theme.sizes.fontSize};
+    font-size: ${({ theme }) => theme.sizes.font.md};
   }
 
   input, textarea {
-    padding: ${({ theme }) => theme.spacing.small};
-    border-radius: ${({ theme }) => theme.borderRadius.medium}; 
+    padding: ${({ theme }) => theme.spacing.xs};
+    border-radius: ${({ theme }) => theme.borderRadius.md}; 
     border: ${({ theme }) =>
-		`${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.border}`};
+		`${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.border.main}`};
     width: 100%;
-    font-size: ${({ theme }) => theme.sizes.fontSize};
-    margin-bottom: ${({ theme }) => theme.spacing.medium}; 
+    font-size: ${({ theme }) => theme.sizes.font.md};
+    margin-bottom: ${({ theme }) => theme.spacing.md}; 
     outline: none;
     transition: border-color 0.3s ease;
   }
@@ -43,9 +40,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    padding: ${({ theme }) => theme.spacing.small} ${({ theme }) =>
-	theme.spacing.medium};
-    border-radius: ${({ theme }) => theme.borderRadius.small};
+    padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) =>
+	theme.spacing.md};
+    border-radius: ${({ theme }) => theme.borderRadius.xs};
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.buttonText};
     font-family: ${({ theme }) => theme.fonts.primary};
@@ -64,41 +61,48 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.font.accent};
   }
 
   h1 {
-    font-size: ${({ theme }) => theme.sizes.largeFont};
-    margin-bottom: ${({ theme }) => theme.spacing.small};
+    font-size: ${({ theme }) => theme.sizes.font.dxxl};
+    margin-bottom: ${({ theme }) => theme.spacing.xs};
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      font-size: ${({ theme }) => theme.sizes.font.xxl}; 
+    }
   }
 
   h2 {
-    font-size: ${({ theme }) => theme.sizes.smallFont};
-    margin-bottom: ${({ theme }) => theme.spacing.small};
+    font-size: ${({ theme }) => theme.sizes.font.lg};
+    margin-bottom: ${({ theme }) => theme.spacing.xs};
+    font-family: ${({ theme }) => theme.fonts.secondary};
+	  color: ${({ theme }) => theme.colors.font.accent};
+
   }
 
-    @font-face {
-    font-family: 'Raleway';
-    src: url('/assets/fonts/raleway/Raleway-Regular.ttf') format('truetype');
-    font-weight: 400; 
-    font-style: normal;
+  span {
+  font-size: ${({ theme }) => theme.sizes.font.sm};
+  font-family: ${({ theme }) => theme.fonts.secondary};
+	font-weight: ${({ theme }) => theme.fontWeight.normal};
+	line-height: 1.6;
+  color: ${({ theme }) => theme.colors.font.white};
   }
 
-  @font-face {
-    font-family: 'Raleway';
-    src: url('/assets/fonts/Raleway-Italic.ttf') format('truetype');
-    font-weight: 700; 
-    font-style: normal;
+  p{
+    color: ${({ theme }) => theme.colors.font.white};
+    font-family:${({ theme }) => theme.fonts.p};
+    weight:${({ theme }) => theme.fontWeight.bold};
   }
+
 `;
 
 export const ContentWrapper = styled.div`
 	max-width: ${({ theme }) => theme.sizes.maxWidth};
 	margin: 0 auto;
-	padding: ${({ theme }) => theme.spacing.medium};
-	background-color: transparent; /* Keep it transparent to let the body gradient show */
+	padding: ${({ theme }) => theme.spacing.md};
+	background-color: transparent;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing.small};
+	gap: ${({ theme }) => theme.spacing.xs};
 `;

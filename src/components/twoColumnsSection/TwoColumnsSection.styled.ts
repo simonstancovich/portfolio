@@ -1,24 +1,28 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+interface TwoColumnsSectionProps {
+	justifyContent?: string;
+	alignItems?: string;
+	gap?: string;
+}
+
+export const Wrapper = styled.section<TwoColumnsSectionProps>`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start; /* Align items to the top */
-	gap: ${({ theme }) => theme.spacing.medium};
+	align-items: flex-start; 
+	gap: ${({ theme }) => theme.spacing.md};
 
 	/* Ensure equal column widths */
 	& > div {
-		flex: 1; /* Allow columns to grow equally */
-		min-width: 300px; /* Minimum width for each column */
+		flex: 1;
+		min-width: 300px;
 	}
 
-	/* Responsive stacking */
-	@media (max-width: 768px) {
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
 		flex-direction: column;
-		gap: ${({ theme }) => theme.spacing.small};
+		gap: ${({ theme }) => theme.spacing.xs};
 		& > div {
-			width: 100%; /* Columns take full width on small screens */
-		}
+			width: 100%; 
 	}
 `;
