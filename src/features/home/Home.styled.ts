@@ -6,6 +6,7 @@ export const HomeWrapper = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+	gap: 24px;
 `;
 
 export const SubHeaderText = styled.p`
@@ -13,13 +14,10 @@ export const SubHeaderText = styled.p`
 `;
 
 export const TechStackHeader = styled.h2`
-	padding-top: ${({ theme }) => theme.spacing.lg};
-	margin: 0;
 	text-align: left;
 `;
 
 export const SubAboutText = styled.span`
-	padding-top: ${({ theme }) => theme.spacing.xxxs};
 	word-wrap: break-word;
 	word-break: keep-all;
 	overflow-wrap: break-word;

@@ -1,3 +1,4 @@
+import { Footer } from '../components';
 import { NavBar } from '../features/navBar';
 import { ContentWrapper } from '../styles/global';
 import { Outlet } from 'react-router-dom';
@@ -9,6 +10,7 @@ export function MainLayout() {
 			<ContentWrapper>
 				<Outlet />
 			</ContentWrapper>
+			<Footer />
 		</>
 	);
 }

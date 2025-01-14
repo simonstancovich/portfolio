@@ -6,8 +6,6 @@ const Experience = () => <div>This is the Experience Page</div>;
 const Portfolio = () => <div>Here is the Portfolio Page</div>;
 const Contact = () => <div>Get in Touch on the Contact Page</div>;
 
-// etc.
-
 export const routes = [
 	{
 		path: '/',

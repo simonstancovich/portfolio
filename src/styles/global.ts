@@ -10,13 +10,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
+  min-height:100%;
     height: 100%;
     width: 100%;
     background: ${({ theme }) => theme.gradients.main};
     font-family: ${({ theme }) => theme.fonts.primary};
-  }
-
-  body {
+    background-attachment: fixed;
+    }
+    
+    body {
     color: ${({ theme }) => theme.colors.font.accent};
     line-height: 1.6;
     font-size: ${({ theme }) => theme.sizes.font.md};
@@ -99,7 +101,7 @@ export const GlobalStyle = createGlobalStyle`
 export const ContentWrapper = styled.div`
 	max-width: ${({ theme }) => theme.sizes.maxWidth};
 	margin: 0 auto;
-	padding: ${({ theme }) => theme.spacing.md};
+	padding: 0 ${({ theme }) => theme.spacing.md};
 	background-color: transparent;
 	box-sizing: border-box;
 	display: flex;

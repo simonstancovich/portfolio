@@ -3,7 +3,7 @@ import { DefaultTheme } from 'styled-components';
 export const theme: DefaultTheme = {
 	colors: {
 		primary: 'rgba(40, 38, 44, 0.549)',
-		accent: 'rgb(30, 224, 199)', // Lime Green
+		accent: 'rgb(30, 224, 199)',
 		white: 'rgb(255, 255, 255)',
 		navBar: {
 			background: 'rgba(33, 31, 35, 0.35)',
@@ -54,6 +54,7 @@ export const theme: DefaultTheme = {
 		md: '8px',
 		xl: '12px',
 		xxl: '20px',
+		xxxl: '24px',
 		full: '50%',
 	},
 	borderWidth: {

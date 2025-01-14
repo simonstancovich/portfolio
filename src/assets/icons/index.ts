@@ -4,4 +4,5 @@ export const icons = {
 	mail: require('./mail.svg').default,
 	mingCute: require('./mingcute.svg').default,
 	javascript: require('./javascript.svg').default,
+	blob: require('./blob.svg').default,
 };

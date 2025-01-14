@@ -8,5 +8,7 @@ export { TwoColumnsSection } from './twoColumnsSection';
 export { NavBarText } from './typography';
 
 //Images & Icons
-
 export { SvgIcon } from './svgIcon';
+
+//Footer
+export { Footer } from './footer';

@@ -5,7 +5,7 @@ export const DesktopNavBarWrapper = styled.nav`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding-top: 10px;
+	margin-top: 10px;
 `;
 
 export const DesktopNavBarContainer = styled.div`

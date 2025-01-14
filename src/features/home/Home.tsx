@@ -1,8 +1,12 @@
-import { VerticalContainer } from '../../components';
+import { icons } from '../../assets/icons';
+import { SvgIcon, VerticalContainer } from '../../components';
 import { AnimatedText } from '../../components/animatedText/AnimatedText';
+import { GradientText } from '../../components/gradientText/GradientText';
 import { HorizontalContainer } from '../../components/horizontalContainer';
-import { clients, languages, techStack, text } from '../../data/homeData';
-import { AlternatingText } from './components/alternatingText/AlternatingText';
+import { HorizontalScrollableContainer } from '../../components/horizontalScrollableContainer/HorizontalScrollableContainer';
+import { TechCard } from '../../components/techCard/TechCard';
+import { text } from '../../data/homeData';
+import { techData } from '../../data/techData';
 import {
 	HomeWrapper,
 	SubAboutText,
@@ -38,11 +42,9 @@ const Home = () => {
 						</SubAboutText>
 					</VerticalContainer>
 				</VerticalContainer>
-				<VerticalContainer
-					justifyContent='flex-end'
-					alignItems='flex-end'
-				>
-					<VerticalContainer>
+				<VerticalContainer justifyContent='center' alignItems='center'>
+					<SvgIcon src={icons.blob} width='330px' height='330px' />
+					{/* <VerticalContainer>
 						<TechStackHeader>Tech Stack</TechStackHeader>
 					</VerticalContainer>
 					<VerticalContainer>
@@ -59,12 +61,46 @@ const Home = () => {
 					</VerticalContainer>
 					<VerticalContainer>
 						<AlternatingText skills={languages} />
-					</VerticalContainer>
+					</VerticalContainer> */}
 				</VerticalContainer>
 			</HorizontalContainer>
 			<HorizontalContainer>
+				<GradientText
+					text='"Wake up, question your life choices, chug coffee, stare at
+					code, fix one bug, create three more, pretend this is fine,
+					drink more coffee, debate running away to a deserted island,
+					remember you have bills to pay, code anyway, rinse and repeat."'
+				/>
+			</HorizontalContainer>
+			<HorizontalContainer>
 				<VerticalContainer>
-					<SubAboutText></SubAboutText>
+					<TechStackHeader>Tech Stack</TechStackHeader>
+					<HorizontalScrollableContainer>
+						<TechCard
+							title='Front-end'
+							items={techData.frontendSkills}
+						/>
+						<TechCard
+							title='Back-end'
+							items={techData.backendSkills}
+						/>
+						<TechCard
+							title='Devops'
+							items={techData.devopsSkills}
+						/>
+						<TechCard
+							title='Publications'
+							items={techData.publicationsSkills}
+						/>
+						<TechCard
+							title='Integrations'
+							items={techData.integrationsSkills}
+						/>
+						<TechCard
+							title='Libraries'
+							items={techData.librariesSkills}
+						/>
+					</HorizontalScrollableContainer>
 				</VerticalContainer>
 			</HorizontalContainer>
 		</HomeWrapper>
