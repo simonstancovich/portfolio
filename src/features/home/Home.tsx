@@ -8,6 +8,7 @@ import { TechCard } from '../../components/techCard/TechCard';
 import { text } from '../../data/homeData';
 import { techData } from '../../data/techData';
 import {
+	BlobWrapper,
 	HomeWrapper,
 	SubAboutText,
 	SubHeaderText,
@@ -43,25 +44,13 @@ const Home = () => {
 					</VerticalContainer>
 				</VerticalContainer>
 				<VerticalContainer justifyContent='center' alignItems='center'>
-					<SvgIcon src={icons.blob} width='330px' height='330px' />
-					{/* <VerticalContainer>
-						<TechStackHeader>Tech Stack</TechStackHeader>
-					</VerticalContainer>
-					<VerticalContainer>
-						<AlternatingText skills={techStack} />
-					</VerticalContainer>
-					<VerticalContainer>
-						<TechStackHeader>Clients</TechStackHeader>
-					</VerticalContainer>
-					<VerticalContainer>
-						<AlternatingText skills={clients} />
-					</VerticalContainer>
-					<VerticalContainer>
-						<TechStackHeader>Languages</TechStackHeader>
-					</VerticalContainer>
-					<VerticalContainer>
-						<AlternatingText skills={languages} />
-					</VerticalContainer> */}
+					<BlobWrapper>
+						<SvgIcon
+							src={icons.blob}
+							width='330px'
+							height='330px'
+						/>
+					</BlobWrapper>
 				</VerticalContainer>
 			</HorizontalContainer>
 			<HorizontalContainer>

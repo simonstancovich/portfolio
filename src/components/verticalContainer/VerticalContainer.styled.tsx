@@ -24,4 +24,9 @@ export const Container = styled.div<ContainerProps>`
 	justify-content: ${({ justifyContent }) => justifyContent};
 	border-radius: ${({ theme }) => theme.borderRadius.md};
 	transition: ${({ theme }) => theme.transitions.default};
+	gap: ${({ theme }) => theme.spacing.xxs};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		gap: 8px;
+	}
 `;

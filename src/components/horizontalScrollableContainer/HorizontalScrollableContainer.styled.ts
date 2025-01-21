@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 	white-space: nowrap;
 
 	display: flex;
-	gap: 24px;
+	gap: ${({ theme }) => theme.spacing.sm};
 
 	-webkit-overflow-scrolling: touch;
 
@@ -15,10 +15,10 @@ export const Wrapper = styled.div`
 		height: 0px;
 	}
 	&::-webkit-scrollbar-track {
-		background: #333;
+		background: ${({ theme }) => theme.colors.scrollBar.gray};
 	}
 	&::-webkit-scrollbar-thumb {
-		background: #888;
-		border-radius: 4px;
+		background: ${({ theme }) => theme.colors.scrollBar.lightGray};
+		border-radius: ${({ theme }) => theme.spacing.xxxs};
 	}
 `;

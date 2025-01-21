@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
 					<FollowMeText>Follow me:</FollowMeText>
 					<div>
 						<SocialLink
-							href='https://github.com/yourusername'
+							href='https://github.com/simonstancovich'
 							target='_blank'
 							rel='noopener noreferrer'
 							aria-label='GitHub'
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
 							<FaGithub />
 						</SocialLink>
 						<SocialLink
-							href='https://www.linkedin.com/in/yourusername'
+							href='https://se.linkedin.com/in/stancovich'
 							target='_blank'
 							rel='noopener noreferrer'
 							aria-label='LinkedIn'

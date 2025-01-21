@@ -10,6 +10,7 @@ export const HamburgerContainer = styled.div.withConfig({
 	height: 24px;
 	margin-left: ${({ theme }) => theme.spacing.xs};
 	margin-top: ${({ theme }) => theme.spacing.xs};
+	margin-bottom: ${({ theme }) => theme.spacing.xxs};
 
 	span {
 		display: block;

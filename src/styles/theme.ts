@@ -5,9 +5,16 @@ export const theme: DefaultTheme = {
 		primary: 'rgba(40, 38, 44, 0.549)',
 		accent: 'rgb(30, 224, 199)',
 		white: 'rgb(255, 255, 255)',
+		translucentWhite: 'rgba(255, 255, 255,0.02)',
+		lightGray: 'rgba(0, 0, 0, 0.8)',
 		navBar: {
 			background: 'rgba(33, 31, 35, 0.35)',
+			mobileBackground: 'rgb(16, 16, 16)',
 			active: 'rgba(6, 148, 148, 0.286)',
+		},
+		scrollBar: {
+			gray: 'rgba(51, 51, 51,1)',
+			lightGray: 'rgba(136, 136, 136,1)',
 		},
 		font: {
 			accent: '#069494',
@@ -18,6 +25,7 @@ export const theme: DefaultTheme = {
 		},
 		border: {
 			main: 'rgb(163, 203, 56)',
+			gray: 'rgba(40, 38, 44, 1)',
 		},
 	},
 	gradients: {
@@ -82,6 +90,11 @@ export const theme: DefaultTheme = {
 	transitions: {
 		default: 'all 0.3s ease',
 		quick: 'all 0.2s ease-in-out',
+		defaultOpacity: 'opacity 0.3s ease',
+		defaultTransform: 'transform 0.3s ease',
+		defaultFilter: 'filter 0.3s ease',
+		defaultLeft: 'left 0.3s ease',
+		defaultWidth: 'width 0.3s ease',
 	},
 	scale: {
 		xsFull: 'scale(0.95)',

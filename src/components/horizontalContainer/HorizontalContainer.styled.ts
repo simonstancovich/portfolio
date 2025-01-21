@@ -13,4 +13,8 @@ export const Container = styled.div<ContainerProps>`
 	justify-content: ${({ justify }) => justify};
 	border-radius: ${({ theme }) => theme.borderRadius.md};
 	gap: ${({ theme }) => theme.spacing.xs};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		display: block;
+	}
 `;

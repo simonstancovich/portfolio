@@ -13,7 +13,6 @@ export const Wrapper = styled.section<TwoColumnsSectionProps>`
 	align-items: flex-start; 
 	gap: ${({ theme }) => theme.spacing.md};
 
-	/* Ensure equal column widths */
 	& > div {
 		flex: 1;
 		min-width: 300px;

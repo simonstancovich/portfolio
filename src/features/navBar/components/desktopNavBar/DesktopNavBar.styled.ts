@@ -5,7 +5,7 @@ export const DesktopNavBarWrapper = styled.nav`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 10px;
+	padding: ${({ theme }) => theme.spacing.xs}; 0;
 `;
 
 export const DesktopNavBarContainer = styled.div`
@@ -22,7 +22,8 @@ export const Slider = styled.div`
 	height: 100%;
 	background-color: ${({ theme }) => theme.colors.navBar.active};
 	border-radius: ${({ theme }) => theme.borderRadius.xxl};
-	transition: left 0.3s ease, width 0.3s ease;
+	transition: ${({ theme }) => theme.transitions.defaultLeft},
+		${({ theme }) => theme.transitions.defaultWidth};
 `;
 
 export const DesktopNavBarItem = styled(NavLink)`

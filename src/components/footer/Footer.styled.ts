@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-	width: 80%;
+	max-width: 1130px;
 	display: flex;
 	flex-direction: column;
 	gap: ${({ theme }) => theme.spacing.xxs};
 	padding: ${({ theme }) => theme.spacing.xs} 0;
 	margin: 0 auto;
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		padding: ${({ theme }) => theme.spacing.xs};
+	}
 `;
 
 export const SocialBox = styled.div`
@@ -19,6 +23,11 @@ export const SocialBox = styled.div`
 	border-radius: ${({ theme }) => theme.borderRadius.xxxl};
 
 	padding: ${({ theme }) => theme.spacing.xs};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		padding: ${({ theme }) => theme.spacing.xxs};
+		border-radius: ${({ theme }) => theme.borderRadius.xl};
+	}
 `;
 
 export const SocialBoxContent = styled.div`
@@ -38,7 +47,7 @@ export const FollowMeText = styled.span`
 export const SocialLink = styled.a`
 	margin-left: ${({ theme }) => theme.spacing.xs};
 	color: ${({ theme }) => theme.colors.font.white};
-	font-size: 1.25rem;
+	font-size: ${({ theme }) => theme.sizes.font.lg};
 	transition: ${({ theme }) => theme.transitions.default};
 
 	&:hover {

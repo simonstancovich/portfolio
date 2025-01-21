@@ -19,7 +19,9 @@ export const StyledSvgWrapper = styled.img<StyledSvgWrapperProps>`
     filter: brightness(0) saturate(100%) invert(37%) sepia(80%) saturate(500%) hue-rotate(${color});
   `}
 
-	transition: transform 0.3s ease, filter 0.3s ease;
+	transition: ${({ theme }) => theme.transitions.defaultTransform}, ${({
+		theme,
+	}) => theme.transitions.defaultFilter};
 
 	&:hover {
 		transform: scale(1.1);

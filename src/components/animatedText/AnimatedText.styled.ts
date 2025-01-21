@@ -26,4 +26,8 @@ export const CharSpan = styled.span<AnimatedTextProps>`
 	animation: ${appear} 0.3s forwards;
 	animation-delay: ${({ index }) => index * 0.1}s;
 	font-size: ${({ theme }) => theme.sizes.font.dxxl};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		font-size: ${({ theme }) => theme.sizes.font.xl};
+	}
 `;

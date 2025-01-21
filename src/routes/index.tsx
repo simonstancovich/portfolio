@@ -1,8 +1,8 @@
+import { Experience } from '../features/experience/Experience';
 import Home from '../features/home/Home';
 import { NotFound } from '../features/notFound/NotFound';
 import { MainLayout } from '../layouts/MainLayout';
 
-const Experience = () => <div>This is the Experience Page</div>;
 const Portfolio = () => <div>Here is the Portfolio Page</div>;
 const Contact = () => <div>Get in Touch on the Contact Page</div>;
 

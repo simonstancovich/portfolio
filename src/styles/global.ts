@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-  min-height:100%;
+    min-height:100%;
     height: 100%;
     width: 100%;
     background: ${({ theme }) => theme.gradients.main};
@@ -107,4 +107,8 @@ export const ContentWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: ${({ theme }) => theme.spacing.xs};
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+		padding: 0 ${({ theme }) => theme.spacing.xs};
+	}
 `;
