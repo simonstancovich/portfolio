@@ -19,10 +19,3 @@ export const routes = [
 		],
 	},
 ];
-
-// export const routes = [
-// 	{ path: '/', element: <Home /> },
-// 	{ path: '/experience', element: <Experience /> },
-// 	{ path: '/portfolio', element: <Portfolio /> },
-// 	{ path: '/contact', element: <Contact /> },
-// ];
