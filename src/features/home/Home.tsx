@@ -23,7 +23,7 @@ const Home = () => {
           <VerticalContainer>
             <AnimatedText text={text} />
             <SubHeaderText>
-              Fullstack Developer | Problem Solver | Bug Hunter | Team Player
+              Full-Stack Developer | Problem Solver | Bug Hunter | Team Player
             </SubHeaderText>
             <SubAboutText>
               With almost 5 years of experience as a full-stack developer, I’ve
