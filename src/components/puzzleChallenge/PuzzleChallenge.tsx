@@ -200,8 +200,9 @@ const PuzzleChallenge: React.FC<PuzzleChallengeProps> = ({ rows, columns }) => {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center" }}>
-        Rearrange the puzzle to reveal my phone number!
+      <h2>
+        If you want to get in touch fast, solve the puzzle to reveal my phone
+        number:
       </h2>
       {imageUrl && pieces.length > 0 ? (
         <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
