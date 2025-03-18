@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
+import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: ${({ theme }) => theme.spacing.xs};
     border-radius: ${({ theme }) => theme.borderRadius.md}; 
     border: ${({ theme }) =>
-		`${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.border.main}`};
+      `${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.border.main}`};
     width: 100%;
     font-size: ${({ theme }) => theme.sizes.font.md};
     margin-bottom: ${({ theme }) => theme.spacing.md}; 
@@ -38,18 +38,18 @@ export const GlobalStyle = createGlobalStyle`
 
   input:focus, textarea:focus {
     border: ${({ theme }) =>
-		`${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.accent}`};
+      `${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.accent}`};
   }
 
   button {
     padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) =>
-	theme.spacing.md};
+  theme.spacing.md};
     border-radius: ${({ theme }) => theme.borderRadius.xs};
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.buttonText};
     font-family: ${({ theme }) => theme.fonts.primary};
     border: ${({ theme }) =>
-		`${theme.borderWidth.thin} ${theme.borderStyle.solid} transparent`};
+      `${theme.borderWidth.thin} ${theme.borderStyle.solid} transparent`};
     transition: ${({ theme }) => theme.transitions.default};
     cursor: pointer;
   }
@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
   button:hover {
     background-color: ${({ theme }) => theme.colors.accent};
     border: ${({ theme }) =>
-		`${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.primary}`};
+      `${theme.borderWidth.thin} ${theme.borderStyle.solid} ${theme.colors.primary}`};
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -93,22 +93,30 @@ export const GlobalStyle = createGlobalStyle`
   p{
     color: ${({ theme }) => theme.colors.font.white};
     font-family:${({ theme }) => theme.fonts.p};
-    weight:${({ theme }) => theme.fontWeight.bold};
+    font-weight:${({ theme }) => theme.fontWeight.bold};
   }
+
+  a{
+    color: ${({ theme }) => theme.colors.font.white};
+    font-family:${({ theme }) => theme.fonts.p};
+    font-weight:${({ theme }) => theme.fontWeight.bold};
+    text-decoration: none;
+  }
+
 
 `;
 
 export const ContentWrapper = styled.div`
-	max-width: ${({ theme }) => theme.sizes.maxWidth};
-	margin: 0 auto;
-	padding: 0 ${({ theme }) => theme.spacing.md};
-	background-color: transparent;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing.xs};
+  max-width: ${({ theme }) => theme.sizes.maxWidth};
+  margin: 0 auto;
+  padding: 0 ${({ theme }) => theme.spacing.md};
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.xs};
 
-	@media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-		padding: 0 ${({ theme }) => theme.spacing.xs};
-	}
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 0 ${({ theme }) => theme.spacing.xs};
+  }
 `;
