@@ -42,19 +42,35 @@ const flipAnimation = keyframes`
   }
 `;
 
+const linkAppearAnimation = keyframes`
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  0% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+`;
+
 export const ImageWrapper = styled.div`
   width: 33.33%;
   height: 100%;
   position: relative;
   perspective: 1000px;
   background: rgba(33, 31, 35, 0.35);
+  border-radius: ${({ theme }) => theme.borderRadius.md};
+  &:hover {
+    animation: ${linkAppearAnimation} 1.6s forwards;
+  }
   &:hover img {
-    animation: ${flipAnimation} 0.6s forwards;
+    animation: ${flipAnimation} 1.6s forwards;
   }
 
   &:hover a {
     opacity: 1;
     transform: rotateY(0);
+    animation: ${linkAppearAnimation} 1.6s forwards;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -67,7 +83,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: ${({ theme }) => theme.borderRadius.small};
+  border-radius: ${({ theme }) => theme.borderRadius.md};
   backface-visibility: hidden;
 `;
 
@@ -101,4 +117,30 @@ export const TextWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
   }
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    color: ${({ theme }) => theme.colors.accent};
+    font-size: ${({ theme }) => theme.sizes.font.xl};
+  }
+`;
+
+export const TechItemWrapper = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+export const TechLabel = styled.span`
+  margin-left: ${({ theme }) => theme.spacing.xs};
+  color: #ccc;
+  text-align: center;
 `;

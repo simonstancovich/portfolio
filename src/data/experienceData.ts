@@ -1,28 +1,28 @@
 const pb = {
   title: "P & B",
   imageUrl: "pb",
-  text: "P & B is a web app build in React with typescript with Nest JS with PostgreSQL as the backend. This app was made for the company to avoid doing surveys on paper and use an ipad or laptop to document different points. Here I build a very complex and huge web form with real time saving to avoid data loss. I used firebase for user authentication.",
+  text: "P & B was a web-app built on React with TypeScript on the Front-end and Nest.js with PostgreSQL on the backend. Simon had to digitalize a very comprehensive paper form and translate it to work for the web, allowing for multiple languages and a dynamic way of fetching translations with google documents. Html-to-docx and Html-to-xlsx was used to build word and excel files from the html. Cloud functions through GCP were used to facilitate data heavy  Auth0 was used to manage users.",
   link: "https://www.pob.se/",
 };
 
 const cresnd = {
   title: "Cresnd",
   imageUrl: "cresnd",
-  text: "Cresnd is an app for iOS and Android build with React native with typescript with Nest JS and PostgreSQL as the backend, it also used firebase for user authenticaton. This app handles discovery and purchases of parties around Stockholm.",
+  text: "Cresnd was an iOS and Android app built on React Native with TypeScript on the Front-end and Nest.js, Firebase and PostgreSQL on the backend. Simon had to lead a team of 3 developers. The app handles events made by users, finding these events through google maps and purchasing tickets for these events using Stripe Elements. Cloud functions were added for certain cron jobs through GCP.",
   link: "https://www.cresnd.com/",
 };
 
 const concea = {
   title: "Concea",
   imageUrl: "concea",
-  text: "Concea is a web app made with Vue JS using Node JS and Sanity for the backend. This is an app for consultants in accounting. I helped migrate the old website, update most libraries and Vue, I also had to incorporate a lot of APIs to handle recruting. This client was very happy with my work and I had full control over the project helping the project manager.",
+  text: "Concea was a web-app developed with Vue.js on the Front-end and Node.js on the backend with Sanity as a headless CMS. This was a website to match consultants with gigs. An integration to a web service called Evali was made to assess the candidates.",
   link: "https://www.concea.se/",
 };
 
 const osam = {
   title: "Open Stage & Mind",
   imageUrl: "osam",
-  text: "Open Stage & Mind is an app for iOS and Android using Strapi as the backend. This app is mindfulness app for artists. Here I helped develop the entire app with its features, implementing playback for all the sounds and music.",
+  text: "Open Stage & Mind was an app for iOS and Android developer with React Native with TypeScript on the Front-end and Node.js and Strapi on the Back-end. This was an app made as a mindfulness app for musicians. Different sounds and music had to be streamed with custom animations for each type of sound. ",
   link: "https://apps.apple.com/se/app/open-stage-mind/id6478114172",
 };
 
