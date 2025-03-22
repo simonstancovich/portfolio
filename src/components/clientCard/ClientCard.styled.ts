@@ -39,7 +39,6 @@ export const ImageWrapper = styled.div`
   background: rgba(33, 31, 35, 0.35);
   border-radius: ${({ theme }) => theme.borderRadius.md};
 
-  /* When hovering the wrapper, animate the child image and overlay */
   &:hover img {
     transform: rotateY(180deg);
     opacity: 0;
@@ -61,9 +60,7 @@ export const Image = styled.img`
   object-fit: cover;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   backface-visibility: hidden;
-  /* Set up the transition for transform and opacity */
   transition: transform 1.6s, opacity 1.6s;
-  /* Default state */
   transform: rotateY(0);
   opacity: 1;
 `;
@@ -81,11 +78,9 @@ export const LinkOverlay = styled.a`
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   font-size: ${({ theme }) => theme.sizes.mediumFont};
-  /* Default state: hidden and rotated */
   opacity: 0;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  /* Transition for smooth entrance and exit */
   transition: transform 1.6s, opacity 1.6s;
 `;
 
