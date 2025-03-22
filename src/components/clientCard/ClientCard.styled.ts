@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 interface CardProps {
   imagePosition: "left" | "right";
@@ -31,28 +31,6 @@ export const Card = styled.div<CardProps>`
   }
 `;
 
-const flipAnimation = keyframes`
-  0% {
-    transform: rotateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateY(180deg);
-    opacity: 0;
-  }
-`;
-
-const linkAppearAnimation = keyframes`
-  100% {
-    transform: rotateY(0);
-    opacity: 1;
-  }
-  0% {
-    transform: rotateY(180deg);
-    opacity: 0;
-  }
-`;
-
 export const ImageWrapper = styled.div`
   width: 33.33%;
   height: 100%;
@@ -60,17 +38,15 @@ export const ImageWrapper = styled.div`
   perspective: 1000px;
   background: rgba(33, 31, 35, 0.35);
   border-radius: ${({ theme }) => theme.borderRadius.md};
-  &:hover {
-    animation: ${linkAppearAnimation} 1.6s forwards;
-  }
-  &:hover img {
-    animation: ${flipAnimation} 1.6s forwards;
-  }
 
+  /* When hovering the wrapper, animate the child image and overlay */
+  &:hover img {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
   &:hover a {
     opacity: 1;
     transform: rotateY(0);
-    animation: ${linkAppearAnimation} 1.6s forwards;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -85,6 +61,11 @@ export const Image = styled.img`
   object-fit: cover;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   backface-visibility: hidden;
+  /* Set up the transition for transform and opacity */
+  transition: transform 1.6s, opacity 1.6s;
+  /* Default state */
+  transform: rotateY(0);
+  opacity: 1;
 `;
 
 export const LinkOverlay = styled.a`
@@ -100,11 +81,12 @@ export const LinkOverlay = styled.a`
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   font-size: ${({ theme }) => theme.sizes.mediumFont};
+  /* Default state: hidden and rotated */
   opacity: 0;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  transition: ${({ theme }) => theme.transitions.defaultOpacity},
-    ${({ theme }) => theme.transitions.defaultTransform};
+  /* Transition for smooth entrance and exit */
+  transition: transform 1.6s, opacity 1.6s;
 `;
 
 export const TextWrapper = styled.div`
