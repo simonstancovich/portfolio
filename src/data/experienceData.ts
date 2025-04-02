@@ -22,14 +22,14 @@ const concea = {
 const osam = {
   title: "Open Stage & Mind",
   imageUrl: "osam",
-  text: "Open Stage & Mind was an app for iOS and Android developer with React Native with TypeScript on the Front-end and Node.js and Strapi on the Back-end. This was an app made as a mindfulness app for musicians. Different sounds and music had to be streamed with custom animations for each type of sound. ",
+  text: "Open Stage & Mind was an app for iOS and Android developed with React Native with TypeScript on the Front-end and Node.js and Strapi on the Back-end. This was an app made as a mindfulness app for musicians. Different sounds and music had to be streamed with custom animations for each type of sound. ",
   link: "https://apps.apple.com/se/app/open-stage-mind/id6478114172",
 };
 
 const graceJane = {
   title: "Grace & Jane",
   imageUrl: "gracejane",
-  text: "Grace & Jane is an app for iOS and Android using firebase for the backend. This is a social app for women interested in Hermés. I helped develop the different UI features and the chat feature.",
+  text: "Grace & Jane was ann app for iOS and Android developed with React Native with TypeScript on the Front-end and Nest.js, PostgreSQL and Firebase on the backend. This was an Instagram and Pinterest inspired app made for women who love Hermes bags. Here Simon led a team of three developers. ",
   link: "https://apps.apple.com/se/app/grace-and-jane/id6449259423",
 };
 
